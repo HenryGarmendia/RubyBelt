@@ -1,0 +1,186 @@
+$clouds: #ecf0f1;
+$light_gray: #C0C1C1;
+$mid_blue: #2c3e50;
+$global_heading: #233140;
+
+@mixin bold_font {
+  font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	// text-transform: uppercase;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	padding-top: 4.5rem;
+	font-family: 'Dosis', sans-serif;
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.wrapper_with_padding {
+	width: 80%;
+	margin: 0 auto;
+	padding: 3.5rem 0;
+}
+
+.form_wrapper {
+	width: 70%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.register_container {
+	width: 45%;
+	float: left;
+	padding-right: 20px;
+}
+
+.login_container {
+	width: 45%;
+	float: left;
+}
+
+.add_container {
+	width: 45%;
+	padding-right: 20px;
+}
+
+legend {
+	font-size: 19px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.nav_box {
+	float: right;
+	position: relative;
+	right: 13rem;
+	bottom: 1rem;
+}
+
+button, .button {
+	border-radius: 0.2rem;
+	border: none;
+	box-shadow: 0px 2px 0px rgba(76, 76, 76, 0.6);
+	cursor: pointer;
+	outline: none;
+	background: $mid_blue;
+	padding: 0.8rem 2.5rem;
+	// transition: background 0.4s ease-out;
+	a {
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+	}
+}
+
+.button {
+	color: white;
+	margin: .5rem 0;
+}
+
+a {
+	color: $mid_blue;
+	transition: background 0.4s ease-out;
+	text-decoration: none;
+	&:hover {
+		color: #white;
+	}
+}
+
+table {
+	margin: 2rem 0;
+	text-align: left;
+}
+
+thead {
+	background-color: #BFB5B8;
+}
+
+th {
+	padding: .5rem 1.5rem .5rem .5rem;
+}
+
+td {
+	padding-top: .5rem;
+    padding-right: 3rem;
+    padding-left: .5rem;
+}
+
+td:nth-child(1) {
+	text-align: left;
+}
+
+td:nth-child(3) {
+	width: 15rem;
+}
+
+.btn-small {
+	margin: .5rem;
+	// text-align: left;
+}
+
+.btn-small, a {
+	border-radius: 0.2rem;
+	box-shadow: 0px 2px 0px rgba(102,119,205, 0.6);
+	padding: .5rem 1.4rem;
+	text-decoration: none;
+}
+
+#table_btn, a {
+	border-radius: 0.2rem;
+	box-shadow: 0px 2px 0px rgba(102,119,205, 0.6);
+	padding: .5rem .4rem;
+	text-decoration: none;
+}
+
+.alert {
+    border-radius: .3rem;
+    font-size: 16px;
+    padding: 1rem 1rem 1rem 2rem;
+    margin: 0 auto;
+    text-align: left;
+    width: 70%;
+}
+// FOOTER STYLING (OPTIONAL)
+
+footer {
+	background: #529ECC;
+	width: 100%;
+	padding: 2rem 0;
+	color: white;
+	text-align: center;
+	@include bold_font;
+	p {
+		margin: 0;
+		font-size: .65rem;
+	}
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	width: 100%;
+	margin-bottom: 1rem;
+	border: 1px solid $light_gray;
+	border-radius: .4rem;
+	padding: .5rem;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	height: 40px;
+}

@@ -1,0 +1,23 @@
+<% if flash[:logout_alert] %>
+  <h3 class="alert"><%= flash[:logout_alert] %></h3>
+<% end %>
+
+<% if flash[:new_user_errors] %>
+  <h3 class="alert"><%= flash[:new_user_errors] %></h3>
+<% end %>
+
+<div class="register_container">
+	<fieldset>
+		<legend>Register</legend>
+		<%= render "register" %>
+	</fieldset>
+</div><!-- //register_container -->
+<% if flash[:login_alert] %>
+  <h3 class="alert"><%= flash[:login_alert] %></h3>
+<% end %>
+<div class="login_container">
+	<fieldset>
+		<legend>Login</legend>
+		<%= render "login" %>
+	</fieldset>
+</div><!-- //login_container -->
